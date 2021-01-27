@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import api from './api';
+import api from './services/api';
+import Menu from './components/Menu';
+import { Button } from 'reactstrap';
 
 class App extends Component {
   state = {
@@ -12,23 +14,24 @@ class App extends Component {
   
   }
 
+
   render() {
     
     const { musicas } = this.state;
 
     return (
       <div>
-        <h1>Listar</h1>
+        <Menu />
+        <h1>Os melhores artistas do momento</h1>
         {musicas.map(musica => (
-          <li key={musica.id}>
+          <ul key={musica.id}>
             <h3>              
-              <p>Nome: {musica.name}</p>
               <p>Artista: {musica.art.name}</p>
-              <p> <a href={musica.art.url} target="_blank">Ver artista</a></p>
+              <p>Música: {musica.name}</p>
               <img src={musica.art.pic_medium}/>
-              <p> <a href={musica.art.url} target="_blank">Ver artista</a></p>
+              <p><a href={musica.art.url} target="_blank">Ver artista</a><Button color="success" >Ver Artista </Button></p>
             </h3>
-          </li>
+          </ul>
         ))}
         
       </div>
@@ -38,3 +41,4 @@ class App extends Component {
 
 export default App;
 
+/*<p><Button color="success" onClick={() => this.handleClick() }> <a href={musica.art.url} target="_blank">Ver artista</a></Button></p>*/
