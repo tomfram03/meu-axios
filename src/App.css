@@ -1,5 +1,9 @@
-.container {
+.App {
     
     flex-direction: column;
     align-items: center;
+}
+.bodyCard {
+    background-Color: '#FFFACD';
+    border-Color: '#FF0000';
 }

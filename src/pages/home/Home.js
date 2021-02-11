@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
-import './App.css';
-import Routes from './routes';
-/*
-import Home from './pages/home/Home';
-import Menu from './components/Menu';
-import Cadastro from './pages/cadastrar/Cadastro'*/
+import ArtigosCard from '../../components/Card';
+import { Col, Row } from 'reactstrap';
+import Menu from '../../components/Menu';
 
-class App extends Component {
+class Home extends Component {   
+
   render() {
+
     return (
-      <div className="container">
-        <Routes />
-      </div>
-    );
+      <>
+        <Menu />
+        <Row>
+          <Col sm="3">
+            <ArtigosCard />
+          </Col>
+        </Row>
+
+      </>
+    )
   }
 }
 
-export default App;
+export default Home;
 
 /*
 class App extends Component {
