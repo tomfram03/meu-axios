@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ArtigosCard from '../../components/Card';
-import { Col, Row } from 'reactstrap';
 import Menu from '../../components/Menu';
+import CardListItem from './../../components/Card';
+import Cards from '../../components/Cards'
 
 class Home extends Component {   
 
@@ -10,12 +10,7 @@ class Home extends Component {
     return (
       <>
         <Menu />
-        <Row>
-          <Col sm="3">
-            <ArtigosCard />
-          </Col>
-        </Row>
-
+        <Cards />
       </>
     )
   }
